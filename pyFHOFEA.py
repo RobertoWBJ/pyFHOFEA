@@ -10,22 +10,21 @@ class Pre_processing():
     def __init__(self, mesh_path: str, DOF: int = 2):
         self.mesh_path = mesh_path
         mesh = meshio.read(mesh_path)
-        self.point = mesh.points  # importa os nós
-        self.cells = mesh.cells_dict  # importa os elementos
-        self.cell_data = mesh.cell_data_dict  # importa a relação entre a geometria e o physical group
-        self.physical_group = mesh.field_data  # importa os nomes e as referências do physical group
+        self.point = mesh.points
+        self.cells = mesh.cells_dict
+        self.cell_data = mesh.cell_data_dict
+        self.physical_group = mesh.field_data
 
         x = self.point[:, 0]
         y = self.point[:, 1]
         elements = self.cells['triangle']
         self.triangulation = tri.Triangulation(x, y, elements)
 
-        self.DOF_structure = len(self.point) * DOF  # verifica o Nº de GDLs da estrutura
+        self.DOF_structure = len(self.point) * DOF
 
-        # estabelece a matriz coluna de força
         self.force_matrix = np.zeros(self.DOF_structure)
 
-        self.restrictions = np.array([], dtype='int32')  # inicializa a matriz de restrições
+        self.restrictions = np.array([], dtype='int32')
 
         self.thickness = 0
         self.young_modulus = 0
