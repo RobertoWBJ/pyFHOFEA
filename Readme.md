@@ -9,18 +9,18 @@ The pyFHOFEA is a python package developed to analyse the stresses and strains a
 It was developed to obtain the graduation degree in the area of Mechanical Engineering.
 
 The code uses the same logic of any finite element software to develop an analysis:
-*Pre-processing (define geometry and boundary conditions);
-*Processing (get the results by solving the linear system);
-*Post-processing (show graphically the requested results by the user).
+* Pre-processing (define geometry and boundary conditions);
+* Processing (get the results by solving the linear system);
+* Post-processing (show graphically the requested results by the user).
 
 The script only handles the *Constant Strain Triangle* element, so the mesh must be set as *all triangles*. It solves by considering the elastic regime of ductile materials and small deformations.
 
 ## Packages used
 
 The script uses the following packages:
-*[meshio](https://github.com/nschloe/meshio) (version 5.3.4);
-*[matplotlib](https://matplotlib.org/3.5.1/index.html) (version 3.5.1);
-*[numpy](https://numpy.org/doc/) (version 1.22.4).
+* [meshio](https://github.com/nschloe/meshio) (version 5.3.4);
+* [matplotlib](https://matplotlib.org/3.5.1/index.html) (version 3.5.1);
+* [numpy](https://numpy.org/doc/) (version 1.22.4).
 
 
 # Pre-processing
@@ -61,16 +61,16 @@ The global stiffness matrix is assembled in the beginning of the function used t
 To initialize this class, the user must the the set the instances used in the *Pre_processing* and *Processing* classes.
 
 The results available are:
-*Normal strain in X direction;
-*Normal strain in Y direction;
-*Shear strain in XY plane;
-*Stress in X direction;
-*Stress in Y direction;
-*Stress in XY plane;
-*Maximum principal;
-*Minimum principal;
-*Maximum shear stress on plane;
-*von Mises stress.
+* Normal strain in X direction;
+* Normal strain in Y direction;
+* Shear strain in XY plane;
+* Stress in X direction;
+* Stress in Y direction;
+* Stress in XY plane;
+* Maximum principal;
+* Minimum principal;
+* Maximum shear stress on plane;
+* von Mises stress.
 
 To check the results, the user should call the respective function and set the scale if necessary.
 If the user has named a region by a *physical group*, just this area can be displayed by informing its name as a parameter for the plot method.
