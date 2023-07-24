@@ -1,4 +1,6 @@
-# pyFHOFEA
+<p align="center">
+  <img src="Example_Figures/LOGO_PYFHOFEA.png" width=500>
+</p>
 
 ⚠️ **WARNING - The code is under development, so some inconsistency may appear.**
 
@@ -61,12 +63,12 @@ The global stiffness matrix is assembled in the beginning of the function used t
 To initialize this class, the user must the the set the instances used in the *Pre_processing* and *Processing* classes.
 
 The results available are:
-* Normal strain in X direction;
-* Normal strain in Y direction;
-* Shear strain in XY plane;
-* Stress in X direction;
-* Stress in Y direction;
-* Stress in XY plane;
+* Normal strain on X direction;
+* Normal strain on Y direction;
+* Shear strain on XY plane;
+* Stress on X direction;
+* Stress on Y direction;
+* Stress on XY plane;
 * Maximum principal;
 * Minimum principal;
 * Maximum shear stress on plane;
