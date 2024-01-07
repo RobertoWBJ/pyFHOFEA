@@ -6,7 +6,7 @@
 
 # INTRODUCTION
 
-The pyFHOFEA is a python package developed to analyse the stresses and strains acting on any plate geometry by the finite element method.
+The pyFHOFEA is a python package developed to analyze the stresses and strains acting on any plate geometry by the finite element method.
 
 It was developed to obtain the graduation degree in the area of Mechanical Engineering.
 
